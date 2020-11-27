@@ -18,7 +18,7 @@ div {
   }
 
   html, body {width: auto!important; overflow-x: hidden!important} 
-
+/*do not include below*/
   .centered {
     margin: 0 auto;
     width: 80%;
