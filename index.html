@@ -1,86 +1,91 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Layout Master</title>
-  <link rel="stylesheet" type="text/css" href="./style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dashboard Layout</title>
+<!-- add meta data -->
+<link rel="stylesheet" type="text/css" href="./style.css">
 <link rel="preload" href="AlvaroCondensed.woff" as="font" type="font/woff" crossorigin>
 </head>
 <body>
-  <div class="centered">
-  <div class="zone green">
-    <p class="anyname active">Arbeidsmarkt annu nu</p>
 
-    <h1>Meeste kans op het vinden van baanin post corona tijden</h1>
-    <hr>
-    <h4>TL AANTAL BEROEPTESTEN OP LBO </h4>
+<header >
+<h3 class="anyname active">Sub title of the dashboard</h3>
 
-  </div>
+<h1>Here comes the main titel about the dashboard you're seeing here below etetra</h1>
+<hr>
+<h4>Here comes the titel of the main chart </h4>
+
+</header>
  
 
-  <div class="cover">
+ 
+<div class="container zone ">
+    <canvas id="myChart1"></canvas>
+</div>
 
-    <div class="container zone">
-      <canvas id="myChart1"></canvas>
-    </div>
-  </div>
-
-  <div class="zone blue grid-wrapper">
-    <div class="box one">
-      <h4>TL AANTAL BEROEPEN OP LBO </h4>
-      <h1>23953</h1>
-      <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. </p>
+<div class="zone blue grid-wrapper">
+<div class="box one">
+    <h4>Here comes titel of the box one </h4>
+    <h1>23953</h1>
+    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. </p>
     
-    </div>
-    <div class="box two">
-      <h4>MEES KANSGENDE BEROEP OP EEN BAAN ALLE NIVEAUS</h4>
-      <h1> Beroepen
-        <h1>naam</h1>
-      </h1>
-      <ol>
-        <li>Tweede beroep naam</li>
-        <li>Derde beroep naam</li>
-        <li>Vierde beroep naam</li>
-        <li>Vijfde beroep naam</li>
-        <li>zESDE beroep naam</li>
-        <li>Zevende beroep naam</li>
-      </ol>
-    </div>
-    <div class="box three">
-      <h4>Chart met beroepennamen op lbo niveau van laag naar hoog </h4>
-      <div class="container">
-        <canvas id="myChart"></canvas>
-      </div>
-      <p>Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy</p>
-    </div>
-    <div class="box four">    
-      <h4>Chart met beroepennamen op hbo niveau van laag naar hoog </h4>
-      <div class="container">
-        <canvas id="myChart"></canvas>
-      </div>
-      <p>Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy</p>
-    </div>
-    <div class="box five">
-      <h4>Hier komt nog een titel</h4>
-      <h1>Hier komt iets</h1>
-      <p>Ipsum as their default model text</p>
-      <hr>
-      <h4>Hier komt een anderer titel</h4>
-      <h1>Hier waarschijnlijk ook</h1>
-      <p>Ipsum as their default model text</p>
-      <hr>
-    </div>
-    <div class="box six">
-      <h4>Intermediairs/werkgevers met de meesta aanbod vacatures</h4>
+</div>
+<div class="box two">
+    <h4>Here comes title of another box, here box number three</h4>
+    <h1>Something</h1>
+    <ol>
+    <li>Something number one is</li>
+    <li>Something number two is</li>
+    <li>Something number three is</li>
+    <li>Something number four is</li>
+    <li>Something number five is</li>
+    <li>Something number six is</li>
+    </ol>
+</div>
     
-     <div class="container">
-        <canvas id="myChart2"></canvas>
-      </div>
-      <p>Ipsum as their default model text</p>
+<div class="box three">
+    <h4>Here comes title of another box, here box number three </h4>
+    <div class="container">
+    <canvas id="myChart"></canvas>
     </div>
-  </div>
-  <footer class="zone yellow"> infographic made with love</footer>
+    <p>Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy</p>
+</div>
+<div class="box four">    
+    <h4>Here comes title of another box, here box number four </h4>
+    <div class="container">
+    <canvas id="myChart3"></canvas>
+    </div>
+    <p>Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy</p>
+</div>
+<div class="box five">
+    <h4>Here comes a short titel</h4>
+    <h1>Here comes something</h1>
+    <p>Ipsum as their default model text</p>
+    <hr>
+    <h4>Here comes a short titel</h4>
+    <h1>Here comes something</h1>
+    <p>Ipsum as their default model text</p>
+    <hr>
+</div>
+<div class="box six">
+    <h4>Intermediairs/werkgevers met de meesta aanbod vacatures</h4>
+    
+    <div class="container">
+    <canvas id="myChart2"></canvas>
+    </div>
+    <p>Ipsum as their default model text</p>
 </div>
 </div>
+<footer class="zone green"> 
+    <ul class="main-nav sticky">
+        <li> <a href="">About</a></li>
+        <li> <a href="">Products</a></li>
+        <li> <a href="">Out team</a></li>
+        <li class="push"> <a href="">Contacts</a></li>
+    </ul></footer>
+
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
 <script src="script.js"></script>
 </body>
