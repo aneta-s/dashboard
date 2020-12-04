@@ -1,202 +1,231 @@
-@font-face {
-font-family: AlvaroCondensed;
-src: url("AlvaroCondensed.woff") format("woff"), url("AlvaroCondensed.ttf")  format("truetype");
-}
-@font-face {
-font-family: AlvaroCondensed;
-src: url("webfont.eot"); /* IE9 Compat Modes */
-src: url("webfont.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
-        url("webfont.woff") format("woff"), /* Modern Browsers */
-        url("webfont.ttf")  format("truetype"), /* Safari, Android, iOS */
-        url("webfont.svg#svgFontName") format("svg"); /* Legacy iOS */
-}
-div {
-font-family: Raleway, sans-serif, Arial, Helvetica, AlvaroCondensed;
-}
-
-html, body {width: auto!important; overflow-x: hidden!important}
-
-
 body {
-margin: auto 0; /*Remove prebuild browser default CSS*/
-font-family: Raleway, sans-serif, Arial, Helvetica, AlvaroCondensed;
-display: grid;
-background-color: #d0afcf;
-font-size: 0.7em; /* Default for the whole page*/
-color: rgb(128, 110, 139);
+    margin: auto 0; /*Remove prebuild browser default CSS, margins gone*/
+    font-family: Raleway, sans-serif, Arial, Helvetica, AlvaroCondensed;
+    /*    hier zat een fout! display: grid; */
+    background-color: #d0afcf;
+    font-size: 0.7em; /* Default for the whole page*/
+    color: rgb(128, 110, 139);
 }
 
-
-/*.zone {
-cursor: pointer;
-display: inline-block; do not use when grid system 
-text-align: center;
-color:#FFF;
-font-size:2em;
-border-radius:4px;
-border:1px solid #bbb;
-transition: all 0.3s linear;
+/* .zone {
+    padding:30px 50px;
+    cursor:pointer;
+    color:#FFF;
+    font-size:2em;
+    border-radius:4px;
+    border:1px solid #bbb;
+    transition: all 0.3s linear;
 }
 
-/* HEADER */
-header {
-display: flexbox;
-padding: 20px;
-margin: 20px;
-margin: 0;
-}
-header h1 {
-    font-family: Raleway,sans-serif, Arial;
-    text-transform: uppercase;
-    font-size: 2em;
-    /* margin-top: -0.1em;
-margin-bottom: 0.1em; or line-height: default or 150% */
-    color: rgb(240, 221, 241);
-}
-
-.active {
-font: Raleway;
-font-style: italic;
-/* font-size: 0.7em; */
-}
-
-
-hr {
-border-style: dashed;
-border-color:rgb(128, 110, 139);
-}
-
-h4 {
-text-transform: uppercase;
-}
-
-
-
+.zone:hover {
+    -webkit-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    -moz-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    -o-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+} */
 
 /***********************************************************************
-*  COVER
-**********************************************************************/
-.container {
-display: flex;
-align-items: center;
-justify-content: center;
-height: auto; 
-/*width: 30rem;*/
-padding: 20px;
-margin: 20px;
-}
-
-
-
-/***********************************************************************
-*  GRID PANEL
-**********************************************************************/
-.grid-wrapper {
-    display: grid;
-    grid-gap: 5px;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); /*Everythin is responsive, it fill 1fr when it is small*/
-    grid-template-rows: 1fr;
-    /*I want the whole page filled with cards. I have only 6 cards. Is it possible to get rid off the empty space (see red area)
-        so when resizing the screen the viewpost and container automatically adjust itself, as soon as the view port take up a fr the empty space is filled with cards */
-    justify-items: stretch;
-}
-
-.box > canvas {
-    width: 100%;
-    padding: 60px;
-    margin: 20px;
-}
-
-.box {
-padding: 20px;
-margin: 20px;
-border-width: 1px 1px 1px;
-border-style: dashed;
-border-color:rgb(128, 110, 139);
-
-    
-}
-
-
-/* PARTICULAIR GRID */
-.one h1 {
-font-family: AlvaroCondensed;
-font-size: 3em;
-/*Keep the same margins in each box*/
-margin-top: 0.5em;
-margin-bottom: 0.5em;
-text-transform: uppercase;
-color: rgb(240, 221, 241);
-word-break: break-word;
-}
-
-.two h1 {
-font-family: AlvaroCondensed;
-font-size: 3em;
-margin-top: 0.5em;
-margin-bottom: 0.5em;
-word-break: break-word;
-text-transform: uppercase;
-}
-
-ol li {
-margin-bottom: -20px;
-    
-}
-ol{
-padding-left: 0;
-margin-left: 15px;
-}
-/* Primary font */
-
-
-.five h1 {
-font-family: AlvaroCondensed;
-font-size: 4em;
-margin-top: 0.5em;
-margin-bottom: 0.5em;
-word-break: break-word;
-}
-
-
-
-
-/***********************************************************************
-*  FOOTER
-**********************************************************************/
-/*Sticky navigation
-.sticky {
-position: fixed;
-top: 0;
-width:100%;
-}
-*/
+ *  Nav Bar/Footer
+ **********************************************************************/
 .main-nav {
     display: flex;
     list-style: none;
     align-items: center;
     justify-content: center;
     margin: 0;
+    /*     font-size: 0.7em; */
 }
-/*.push {
-margin: auto;
-}*/
+
+@media only screen and (max-width: 600px) {
+    .main-nav {
+        font-size: 0.5em;
+        padding: 0;
+    }
+}
+
+.push {
+    margin-center: auto;
+}
 
 li {
-padding: 20px;
+    padding: 20px;
 }
 
 a {
-color: rgb(240, 221, 241);
-text-decoration: none;
+    color: #f5f5f6;
+    text-decoration: none;
+}
+
+/***********************************************************************
+ *  Header
+ **********************************************************************/
+
+header {
+    display: flexbox;
+    padding: 20px;
+    margin: 20px;
+    margin: 0;
+}
+
+    header h1 {
+        font-family: Raleway,sans-serif, Arial;
+        text-transform: uppercase;
+        font-size: 2em;
+        /* margin-top: -0.1em;
+margin-bottom: 0.1em; or line-height: default or 150% */
+        color: rgb(240, 221, 241);
+    }
+
+.active {
+    font: Raleway;
+    font-style: italic;
+    /* font-size: 0.7em; */
+}
+
+hr {
+    border-style: dashed;
+    border-color: rgb(128, 110, 139);
+}
+
+h4 {
+    text-transform: uppercase;
+}
+
+/***********************************************************************
+ *  Cover
+ **********************************************************************/
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*make the viewport responsive ie 500vh*/
+    height: auto;
+    /*width: 30rem;*/
+    padding: 20px;
+    margin: 20px;
+}
+
+/***********************************************************************
+ *  Grid Panel
+ **********************************************************************/
+.grid-wrapper {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); /*Everythin is responsive, it fill 1fr when it is small*/
+    grid-template-rows: 1fr;
+    /*I want the whole page filled with cards. I have only 6 cards. Is it possible to get rid off the empty space (see red area)
+        so when resizing the screen the viewpost and container automatically adjust itself, as soon as the view port take up a fr the empty space is filled with cards 
+    justify-items: stretch;*/
+}
+
+.box {
+    background-color: #d0afcf;
+    padding: 20px;
+    margin: 20px;
+    border-width: 1px 1px 1px;
+    border-style: dashed;
+    border-color: rgb(128, 110, 139);
+}
+
+/* PARTICULAIR GRID */
+.one h1 {
+    font-family: AlvaroCondensed;
+    font-size: 3em;
+    /*Keep the same margins in each box*/
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+    color: rgb(240, 221, 241);
+    word-break: break-word;
+}
+
+.two h1 {
+    font-family: AlvaroCondensed;
+    font-size: 3em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    word-break: break-word;
+    text-transform: uppercase;
+}
+
+ol li {
+    margin-bottom: -20px;
+}
+
+ol {
+    padding-left: 0;
+    margin-left: 15px;
+}
+
+.five h1 {
+    font-family: AlvaroCondensed;
+    font-size: 4em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    word-break: break-word;
+}
+
+/***********************************************************************
+ *  Footer
+ *********************************************************************
+footer {
+    text-align: center;
+}
+*/
+/*https://paulund.co.uk/how-to-create-shiny-css-buttons*/
+/***********************************************************************
+ *  Green Background
+ **********************************************************************/
+.green {
+    background: #56B870; /* Old browsers */
+    background: -moz-linear-gradient(top, #56B870 0%, #a5c956 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#56B870), color-stop(100%,#a5c956)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #56B870 0%,#a5c956 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #56B870 0%,#a5c956 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #56B870 0%,#a5c956 100%); /* IE10+ */
+    background: linear-gradient(top, #56B870 0%,#a5c956 100%); /* W3C */
+}
+
+/***********************************************************************
+ *  Red Background
+ **********************************************************************/
+.red {
+    background: #C655BE; /* Old browsers */
+    background: -moz-linear-gradient(top, #C655BE 0%, #cf0404 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#C655BE), color-stop(100%,#cf0404)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #C655BE 0%,#cf0404 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #C655BE 0%,#cf0404 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #C655BE 0%,#cf0404 100%); /* IE10+ */
+    background: linear-gradient(top, #C655BE 0%,#cf0404 100%); /* W3C */
+}
+
+/***********************************************************************
+ *  Yellow Background
+ **********************************************************************/
+.yellow {
+    background: #F3AAAA; /* Old browsers */
+    background: -moz-linear-gradient(top, #F3AAAA 0%, #febf04 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#F3AAAA), color-stop(100%,#febf04)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #F3AAAA 0%,#febf04 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #F3AAAA 0%,#febf04 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #F3AAAA 0%,#febf04 100%); /* IE10+ */
+    background: linear-gradient(top, #F3AAAA 0%,#febf04 100%); /* W3C */
+}
+
+/***********************************************************************
+ *  Blue Background
+ **********************************************************************/
+.blue {
+    background: #7abcff; /* Old browsers */
+    background: -moz-linear-gradient(top, #7abcff 0%, #60abf8 44%, #4096ee 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7abcff), color-stop(44%,#60abf8), color-stop(100%,#4096ee)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* IE10+ */
+    background: linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* W3C */
 }
 
 
-@media only screen and (max-width: 600px) {
-.main-nav {
-    font-size: 0.5em;
-}
-}
 /*How to?
 1. Figure out your layout with story
 2. Make it respponsive
